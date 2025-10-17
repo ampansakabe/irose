@@ -1,10 +1,9 @@
 import dotenv from 'dotenv';
+import { createServer } from './server';
 
 dotenv.config();
 
 async function start() {
-  const { createServer } = await import('./server.js');
-
   const port = Number(process.env.PORT ?? 4000);
   const app = await createServer();
   app.listen(port, () => {

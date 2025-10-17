@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
-import { getTenantClient } from '../services/tenant-service.js';
+import { getTenantClient } from '../services/tenant-service';
 
 export async function attachTenantClient(req: Request, res: Response, next: NextFunction) {
   try {

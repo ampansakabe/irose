@@ -1,5 +1,5 @@
 import type { Pool, PoolClient } from 'pg';
-import { getSharedPool } from '../db/pool.js';
+import { getSharedPool } from '../db/pool';
 
 const tenantPools = new Map<string, Pool>();
 

@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
-import { loadConfig } from '../config/environment.js';
+import { loadConfig } from '../config/environment';
 
 const config = loadConfig();
 

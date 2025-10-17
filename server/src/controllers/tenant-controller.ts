@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { listTenants } from '../services/tenant-service.js';
+import { listTenants } from '../services/tenant-service';
 
 export async function getTenants(_req: Request, res: Response) {
   const tenants = await listTenants();

@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import { createTenantRouter } from './routes/tenants.js';
-import { tenantResolver } from './middleware/tenant-resolver.js';
-import { attachTenantClient } from './middleware/tenant-client.js';
+import { createTenantRouter } from './routes/tenants';
+import { tenantResolver } from './middleware/tenant-resolver';
+import { attachTenantClient } from './middleware/tenant-client';
 
 export async function createServer() {
   const app = express();
