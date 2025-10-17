@@ -57,7 +57,8 @@ The `db` directory contains SQL migration templates to set up shared tables, hel
 
 1. Create a database (e.g. `createdb irose`).
 2. Apply the bootstrap SQL in `db/migrations/000_init.sql`.
-3. Set the `DATABASE_URL` in `server/.env` to point at your database.
+3. Optionally set the `DATABASE_URL` in `server/.env` to point at your database. If this is
+   omitted the server will fall back to `postgres://postgres:postgres@localhost:5432/irose`.
 
 Once the services are running you can experiment by creating schemas manually:
 
@@ -67,3 +68,24 @@ SELECT public.create_tenant('tenant_b');
 ```
 
 Requests with the header `x-tenant-id: tenant_a` will now operate within the `tenant_a` schema.
+
+## Viewing the latest code changes
+
+If you're reviewing the repository inside a terminal and want to inspect the
+changes introduced by the most recent commit, you can ask Git to display the
+diff directly in the window:
+
+```bash
+git show HEAD
+```
+
+To compare your local working tree with the current commit (for example, after
+you make edits), run:
+
+```bash
+git status
+git diff
+```
+
+These commands will show modified files and highlight line-by-line
+differences so you can confirm exactly what was added or removed.
